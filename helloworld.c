@@ -13,20 +13,25 @@ int main(int argc, char** argv) {
 		return -1;
 	}
 
-	while (getc(inputFile) != EOF) {
+        char* fileContent = getc(inputFile);
+	while (fileContent != EOF) {
 
 	}
 
 	fclose(inputFile);
 
 	/* aqui vai a lógica pra compressão */
+        char* compressedFile;
 
 	FILE* outputFile = fopen(("output-%s", filename), "w");
 	if (inputFile == NULL) {
 		printf("Could not open file");
 		return -1;
 	}
-	
+        
+	fprintf(outputFile, compressedFile);
+        printf("File compressed!\n");
+        
 	fclose(outputFile);
 
 	return 0;
